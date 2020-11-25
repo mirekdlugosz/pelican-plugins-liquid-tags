@@ -90,7 +90,7 @@ class LiquidTags(markdown.Extension):
         # Because the fenced code processor is run before, {% %} tags
         # within equations will not be parsed as an include.
         md.preprocessors.add('mdincludes',
-                             _LiquidTagsPreprocessor(self), ">html_block")
+                             _LiquidTagsPreprocessor(self), "<html_block")
 
 
 def makeExtension(configs=None):
